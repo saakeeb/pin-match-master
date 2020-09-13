@@ -5,6 +5,7 @@ const generateInput = ()=>{
 }
 let generateBtn = document.getElementById('generateBtn').addEventListener('click', generateInput);
 
+
 //submit button
 const submitBtn = document.getElementById('submitBtn').addEventListener('click', ()=>{
     const output = document.getElementById('output').value;
@@ -31,11 +32,11 @@ const submitBtn = document.getElementById('submitBtn').addEventListener('click',
             document.getElementById('submitBtn').style.backgroundColor = 'red';
             document.getElementById('denyNotify').style.display = 'none';
             document.getElementById('disableNotify').style.display = 'block';
-
         }
     }
     
 })
+
 
 const getOutput = ()=>{
     return document.getElementById('output').value;
@@ -43,6 +44,7 @@ const getOutput = ()=>{
 const printOutput = num=>{
     document.getElementById('output').value= num;
 }
+
 
 const operator = document.getElementsByClassName('operator');
 for (let i = 0; i < operator.length; i++) {
@@ -55,12 +57,13 @@ for (let i = 0; i < operator.length; i++) {
         if (event.target.id == 'backspace') {
             let output = getOutput().toString();
             if(output){
-                output.substring(0 ,output.length - 1);
+                output.substr(0 ,output.length - 1);
                 console.log(output);
             }
         }
     })   
 }
+
 
 const number = document.getElementsByClassName('number');
 for (let i = 0; i < number.length; i++) {
