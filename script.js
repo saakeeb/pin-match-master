@@ -4,6 +4,7 @@ const generateInput = ()=>{
     document.getElementById('generateInput').value = generateInput;
     document.getElementById('submitBtn').disabled = false;
     document.getElementById('submitBtn').style.backgroundColor = '#495BC3';
+    document.getElementById('disableNotify').style.display = 'none';
     let warning = document.getElementById('warning').innerText;
     if(warning == 0){
         document.getElementById('warning').innerText = '3';
