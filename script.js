@@ -2,6 +2,8 @@
 const generateInput = ()=>{
     let generateInput = Math.floor(1000 + Math.random() * 9000);
     document.getElementById('generateInput').value = generateInput;
+    document.getElementById('submitBtn').disabled = false;
+    document.getElementById('submitBtn').style.backgroundColor = '#495BC3';
 }
 let generateBtn = document.getElementById('generateBtn').addEventListener('click', generateInput);
 
@@ -56,10 +58,7 @@ for (let i = 0; i < operator.length; i++) {
         }
         if (event.target.id == 'backspace') {
             let output = getOutput().toString();
-            if(output){
-                output.substr(0 ,output.length - 1);
-                console.log(output);
-            }
+            printOutput(output.substr(0, output.length - 1))
         }
     })   
 }
