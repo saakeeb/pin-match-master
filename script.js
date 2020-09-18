@@ -2,8 +2,8 @@
 const generateInput = ()=>{
     let generateInput = Math.floor(1000 + Math.random() * 9000);
     document.getElementById('generateInput').value = generateInput;
-    document.getElementById('submitBtn').disabled = false;
-    document.getElementById('submitBtn').style.backgroundColor = '#495BC3';
+    // document.getElementById('submitBtn').disabled = false;
+    // document.getElementById('submitBtn').style.backgroundColor = '#495BC3';
 }
 let generateBtn = document.getElementById('generateBtn').addEventListener('click', generateInput);
 
@@ -30,7 +30,7 @@ const submitBtn = document.getElementById('submitBtn').addEventListener('click',
         warning -= 1;
         document.getElementById('warning').innerText = warning;
         if(warning == 0){
-            document.getElementById('submitBtn').disabled = 'true';
+            document.getElementById('submitBtn').disabled = true;
             document.getElementById('submitBtn').style.backgroundColor = 'red';
             document.getElementById('denyNotify').style.display = 'none';
             document.getElementById('disableNotify').style.display = 'block';
