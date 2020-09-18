@@ -2,8 +2,12 @@
 const generateInput = ()=>{
     let generateInput = Math.floor(1000 + Math.random() * 9000);
     document.getElementById('generateInput').value = generateInput;
-    // document.getElementById('submitBtn').disabled = false;
-    // document.getElementById('submitBtn').style.backgroundColor = '#495BC3';
+    document.getElementById('submitBtn').disabled = false;
+    document.getElementById('submitBtn').style.backgroundColor = '#495BC3';
+    let warning = document.getElementById('warning').innerText;
+    if(warning == 0){
+        document.getElementById('warning').innerText = '3';
+    }
 }
 let generateBtn = document.getElementById('generateBtn').addEventListener('click', generateInput);
 
